@@ -34,7 +34,7 @@ const Typical: React.FC<NewTypicalProps> = ({ loop, steps, wrapper = 'p' }) => {
     }, [loop, steps]);
 
 
-    if(typicalRef) {
+    if (typicalRef) {
         return <Component ref={typicalRef} className={classNames.join(' ')} />;
     }
     return null;

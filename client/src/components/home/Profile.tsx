@@ -44,26 +44,26 @@ const Profile: React.FC = () => {
                         <span className='primary-text'>
                             {" "}
                             <h1>
-                            {" "}
-                            <Typical 
-                            loop={Infinity}
-                            steps={[
-                                "Software Engineer",//17 chars
-                                2000,
-                                "FullStack Dev",//13
-                                2000,
-                                "Frontend Dev",//12
-                                2000,
-                                "TypeScript",//12
-                                2000,
-                                "React",
-                                1400,
-                                "PHP",
-                                1400,
-                            ]}
+                                {" "}
+                                <Typical
+                                    loop={Infinity}
+                                    steps={[
+                                        "Software Engineer",//17 chars
+                                        2000,
+                                        "FullStack Dev",//13
+                                        2000,
+                                        "Frontend Dev",//12
+                                        2000,
+                                        "TypeScript",//12
+                                        2000,
+                                        "React",
+                                        1400,
+                                        "PHP",
+                                        1400,
+                                    ]}
 
-                            wrapper='p'
-                            />
+                                    wrapper='p'
+                                />
 
                             </h1>
                         </span>

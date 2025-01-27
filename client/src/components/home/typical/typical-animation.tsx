@@ -17,7 +17,7 @@ export async function type(node: HTMLElement | null, ...args: Array<string | num
 }
 
 async function edit(node: HTMLElement | null, text: string): Promise<void> {
-    if(node){
+    if (node) {
         const overlap = getOverlap(node.textContent || '', text);
         await perform(node, [...deleter(node.textContent || '', overlap), ...writer(text, overlap)]);
     }
@@ -43,8 +43,8 @@ export function* editor(edits: string[]): Generator<(node: HTMLElement) => void>
 }
 
 export function* writer(
-    text: string, 
-    startIndex: number = 0, 
+    text: string,
+    startIndex: number = 0,
     endIndex: number = text.length
 ): Generator<string> {
     const chars = [...text];
@@ -54,8 +54,8 @@ export function* writer(
 }
 
 export function* deleter(
-    text: string, 
-    startIndex: number = 0, 
+    text: string,
+    startIndex: number = 0,
     endIndex: number = text.length
 ): Generator<string> {
     const chars = [...text];
