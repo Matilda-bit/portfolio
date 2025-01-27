@@ -13,22 +13,22 @@ const Profile: React.FC = () => {
                 <div className='profile-details'>
                     <div className='colz'>
 
-                        <a href='https://www.facebook.com/ovras94/' target="_blank">
+                        <a href='https://www.facebook.com/ovras94/' target="_blank" rel="noopener noreferrer">
                             <i className='fa fa-facebook'></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/polina-ovras/" target="_blank">
+                        <a href="https://www.linkedin.com/in/polina-ovras/" target="_blank" rel="noopener noreferrer">
                             <i className='fa fa-linkedin'></i>
                         </a>
-                        <a href='https://github.com/Matilda-bit' target="_blank">
+                        <a href='https://github.com/Matilda-bit' target="_blank" rel="noopener noreferrer">
                             <i className='fa fa-github'></i>
                         </a>
-                        <a href='https://api.whatsapp.com/send/?phone=%2B972543954881&text&type=phone_number&app_absent=0' target="_blank">
+                        <a href='https://api.whatsapp.com/send/?phone=%2B972543954881&text&type=phone_number&app_absent=0' target="_blank" rel="noopener noreferrer">
                             <i className='fa fa-whatsapp'></i>
                         </a>
-                        <a href="mailto:polinaovras@gmail.com?subject=subject&message=message" target="_blank">
+                        <a href="mailto:polinaovras@gmail.com?subject=subject&message=message" target="_blank" rel="noopener noreferrer">
                             <i className='fa fa-google'></i>
                         </a>
-                        <a href='https://www.instagram.com/ovraspolina?igsh=Ymh5MTJjbmx2Zncw&utm_source=qr' target="_blank">
+                        <a href='https://www.instagram.com/ovraspolina?igsh=Ymh5MTJjbmx2Zncw&utm_source=qr' target="_blank" rel="noopener noreferrer">
                             <i className='fa fa-instagram'></i>
                         </a>
                     </div>

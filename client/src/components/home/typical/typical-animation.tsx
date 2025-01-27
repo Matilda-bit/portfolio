@@ -1,4 +1,4 @@
-export async function type(node: HTMLElement, ...args: Array<string | number | Function | Promise<any>>): Promise<void> {
+export async function type(node: HTMLElement | null, ...args: Array<string | number | Function | Promise<any>>): Promise<void> {
     for (const arg of args) {
         switch (typeof arg) {
             case 'string':
@@ -16,9 +16,11 @@ export async function type(node: HTMLElement, ...args: Array<string | number | F
     }
 }
 
-async function edit(node: HTMLElement, text: string): Promise<void> {
-    const overlap = getOverlap(node.textContent || '', text);
-    await perform(node, [...deleter(node.textContent || '', overlap), ...writer(text, overlap)]);
+async function edit(node: HTMLElement | null, text: string): Promise<void> {
+    if(node){
+        const overlap = getOverlap(node.textContent || '', text);
+        await perform(node, [...deleter(node.textContent || '', overlap), ...writer(text, overlap)]);
+    }
 }
 
 async function wait(ms: number): Promise<void> {

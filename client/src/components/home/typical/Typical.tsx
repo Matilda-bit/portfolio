@@ -1,18 +1,48 @@
-import React, {useRef} from 'react';
+import React, { useRef, useEffect, memo, ElementType } from 'react';
+import { type, type as loopedType } from "./typical-animation";
+
+import "./Typical.css";
 
 type NewTypicalProps = {
     loop: number;
     steps: any[];
-    wrapper: string;
+    wrapper?: ElementType;
     // steps: [text: string, time: number]
 }
 
-const Typical: React.FC<NewTypicalProps> = ({loop, steps, wrapper='p'}) => {
-    const typicalRef = useRef(null);
+const Typical: React.FC<NewTypicalProps> = ({ loop, steps, wrapper = 'p' }) => {
+    const typicalRef = useRef<HTMLElement>(null);
     const Component = wrapper; // <p>
+    const classNames = ["typicalWrapper"];
 
-    
-    return (<div></div>);
+    // if (className) {
+    //   classNames.unshift(className);
+    // }
+    useEffect(() => {
+        if (typicalRef.current) {
+            if (loop === Infinity) {
+                type(typicalRef.current, ...steps, loopedType);
+            } else if (typeof loop === "number") {
+                type(
+                    typicalRef.current,
+                    ...Array(loop)
+                        .fill(steps)
+                        .flat()
+                );
+            } else {
+                type(typicalRef.current, ...steps);
+            }
+
+        }
+    });
+
+    // }, [loop, steps]);
+
+
+    if(typicalRef) {
+        return <Component ref={typicalRef} className={classNames.join(' ')} />;
+    }
+    return null;
 }
 
-export default Typical;
+export default memo(Typical);
