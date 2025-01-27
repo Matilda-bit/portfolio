@@ -1,6 +1,5 @@
 import React from 'react';
 import './Profile.css';
-// import Typical from 'react-typical';
 
 import Typical from './typical/Typical';
 
@@ -49,18 +48,18 @@ const Profile: React.FC = () => {
                             <Typical 
                             loop={Infinity}
                             steps={[
-                                "Software Engineer",
-                                1000,
-                                "Talented Developer",
-                                1000,
-                                "FullStack Developer",
-                                1000,
-                                "Frontend Developer",
-                                1000,
-                                "React Dev",
-                                1000,
-                                "PHP Dev",
-                                1000,
+                                "Software Engineer",//17 chars
+                                2000,
+                                "FullStack Dev",//13
+                                2000,
+                                "Frontend Dev",//12
+                                2000,
+                                "TypeScript",//12
+                                2000,
+                                "React",
+                                1400,
+                                "PHP",
+                                1400,
                             ]}
 
                             wrapper='p'

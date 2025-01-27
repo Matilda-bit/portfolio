@@ -27,10 +27,12 @@ async function wait(ms: number): Promise<void> {
     await new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function perform(node: HTMLElement, edits: string[], speed: number = 60): Promise<void> {
+async function perform(node: HTMLElement, edits: string[], speed: number = 75): Promise<void> {
     for (const op of editor(edits)) {
         op(node);
-        await wait(speed + speed * (Math.random() - 0.5));
+        // const sp = speed + speed * (Math.random() - 0.5);
+        // console.log(sp)//random speed to look more as a human
+        await wait(speed);
     }
 }
 
@@ -63,7 +65,5 @@ export function* deleter(
 }
 
 export function getOverlap(start: string, end: string): number {
-    const startChars = Array.from(start);
-    const endChars = Array.from(end);//??
     return [...start, NaN].findIndex((char, i) => end[i] !== char);
 }

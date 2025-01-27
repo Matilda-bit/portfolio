@@ -7,7 +7,6 @@ type NewTypicalProps = {
     loop: number;
     steps: any[];
     wrapper?: ElementType;
-    // steps: [text: string, time: number]
 }
 
 const Typical: React.FC<NewTypicalProps> = ({ loop, steps, wrapper = 'p' }) => {
@@ -15,9 +14,6 @@ const Typical: React.FC<NewTypicalProps> = ({ loop, steps, wrapper = 'p' }) => {
     const Component = wrapper; // <p>
     const classNames = ["typicalWrapper"];
 
-    // if (className) {
-    //   classNames.unshift(className);
-    // }
     useEffect(() => {
         if (typicalRef.current) {
             if (loop === Infinity) {
@@ -34,9 +30,8 @@ const Typical: React.FC<NewTypicalProps> = ({ loop, steps, wrapper = 'p' }) => {
             }
 
         }
-    });
 
-    // }, [loop, steps]);
+    }, [loop, steps]);
 
 
     if(typicalRef) {
