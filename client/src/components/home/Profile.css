@@ -1,0 +1,108 @@
+.profile-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 10%;
+    min-height: fit-content;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+        url('../../assets//Home/bg-01.png');
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+}
+
+.profile-parent {
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    padding: 10px;
+}
+
+.profile-details {
+    font-size: 24px;
+    font-family: "Poppins SemiBold";
+    padding: 10px;
+}
+
+.colz {
+}
+
+.colz .colz-icon i {
+    color: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.colz .colz-icon i:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.profile-details-name {}
+
+.primary-text {
+    color: var(--white);
+    margin: 0;
+}
+
+.highlighted-text {
+    color: var(--dark-orange);
+}
+
+.profile-details-role {
+    display: flex;
+    flex-direction: column;
+    margin: 14px 0 24px;
+}
+
+.profile-details-role h1 {
+    font-size: 40px;
+    font-family: cursive;
+    min-height: 130px;
+    margin: 0;
+}
+
+
+.profile-role-tagline {
+    font-size: 19px;
+    margin: 5px 0 0 ;
+    font-family: "Poppins Lidght";
+}
+
+.profile-options .highlighted-btn {
+    margin-left: 28px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profile-options .highlighted-btn:hover {
+    background-color: cornsilk;
+    color: #111;
+}
+
+
+.profile-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 5px 0 var(--white);
+    border-radius: 50%;
+    height: 380px;
+    width: 380px;
+    margin-left: 10px;
+
+}
+
+.profile-picture-bg {
+    height: 96%;
+    width: 96%;
+    background-image: url("../../assets//Home/IMG_4387.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    background-position: center;
+    transition: transform 0.5s ease-out;
+}
+
+.profile-picture-bg:hover {
+    transform: scale(1.03);
+}
