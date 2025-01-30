@@ -12,7 +12,6 @@
     display: flex;
     align-items: center;
     color: aliceblue;
-    padding: 10px;
 }
 
 .profile-details {
@@ -23,8 +22,7 @@
     margin: 10px auto 30px;
 }
 
-.colz {
-}
+.colz {}
 
 .colz .colz-icon i {
     color: white;
@@ -36,12 +34,14 @@
     opacity: 1;
 }
 
-.profile-details-name {}
+.profile-details-name {
+    margin-top: 20px;
+}
 
 .primary-text {
     color: var(--white);
     margin: 0 auto;
-  
+
 }
 
 .highlighted-text {
@@ -52,8 +52,8 @@
     display: flex;
     flex-direction: column;
     /* margin: 14px 0 24px; */
-    /* max-width: 60%;
-    margin: 10px auto 30px; */
+    /* max-width: 60%; */
+    /* margin: 10px auto 30px; */
 }
 
 .profile-details-role h1 {
@@ -65,12 +65,14 @@
 
 
 .profile-role-tagline {
+    font-size: 21px;
+    margin-bottom: 30px !important;
     font-size: 19px;
-    margin: 5px 0 0 ;
+    margin: 5px 0 0;
     font-family: "Poppins Lidght";
 }
 
-.profile-options .highlighted-btn {
+.profile-options {
     margin-left: 28px;
     padding: 10px 20px;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -86,7 +88,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 1px 5px 0 var(--white);
+    box-shadow: 0 5px 6px 0 var(--white);
     border-radius: 50%;
     height: 380px;
     width: 380px;
@@ -97,7 +99,7 @@
 .profile-picture-bg {
     height: 96%;
     width: 96%;
-    background-image: url("../../../assets//Home/IMG_4387.jpg");
+    background-image: url("../../../assets/Home/IMG_1869 2.jpg");
     background-size: cover;
     border-radius: 50%;
     background-position: center;
@@ -107,19 +109,24 @@
 .profile-picture-bg:hover {
     transform: scale(1.03);
 }
+
 @media screen and (max-width: 1110px) {
     .profile-picture {
         margin-left: 10px;
     }
+
     .profile-details {
         width: 60%;
     }
+
     .profile-details-name {
         font-size: 20px;
     }
+
     .profile-details-role .primary-text {
         font-size: 12px;
     }
+
     .profile-options .btn {
         width: 120px;
         padding: 10px 0;
@@ -139,24 +146,28 @@
     .profile-picture {
         margin: 0 !important;
     }
+
     .profile-parent {
         flex-direction: column-reverse;
         margin-top: 40px;
     }
+
     .profile-options {
         display: flex;
         justify-content: space-between;
     }
+
     .profile-details {
         margin-top: 25px;
     }
+
     .profile-options .highlighted-btn {
-        margin: 0 !important;
+        /* margin: 0 !important; */
     }
 
     .profile-options,
     .profile-details-role {
-       text-align: center;
+        text-align: center;
     }
 
 }
@@ -167,9 +178,11 @@
         height: 270px;
         margin: 0;
     }
+
     .profile-details {
         width: 90%;
     }
+
     .profile-parent {
         margin: 0;
     }

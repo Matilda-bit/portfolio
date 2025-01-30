@@ -3,6 +3,7 @@
 ### Packages to install
 ...
 
+`npm i rxjs`
 
 ## Available Scripts
 
