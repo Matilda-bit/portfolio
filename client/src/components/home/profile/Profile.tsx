@@ -1,7 +1,7 @@
 import React from 'react';
 import './Profile.css';
 
-import Typical from './typical/Typical';
+import Typical from '../typical/Typical';
 
 
 
@@ -27,9 +27,9 @@ const Profile: React.FC = () => {
                             <a href="mailto:polinaovras@gmail.com?subject=subject&message=message" target="_blank" rel="noopener noreferrer">
                                 <i className='fa fa-google'></i>
                             </a>
-                            <a href='https://www.instagram.com/ovraspolina?igsh=Ymh5MTJjbmx2Zncw&utm_source=qr' target="_blank" rel="noopener noreferrer">
+                            {/* <a href='https://www.instagram.com/ovraspolina?igsh=Ymh5MTJjbmx2Zncw&utm_source=qr' target="_blank" rel="noopener noreferrer">
                                 <i className='fa fa-instagram'></i>
-                            </a>
+                            </a> */}
                         </div>
 
                     </div>
