@@ -6,7 +6,7 @@ const PortfolioContainer: React.FC = () => {
     return TOTAL_SCREENS.map((screen) => (
       screen.component ? (
         <div key={screen.screen_name} id={screen.screen_name}>
-          <screen.component screenName={screen.screen_name} id={screen.screen_name}/>
+          <screen.component screenName={screen.screen_name} id={screen.screen_name} />
         </div>
       ) : (
         <div key={screen.screen_name}></div>
@@ -16,7 +16,9 @@ const PortfolioContainer: React.FC = () => {
 
 
   return (
-    <div className='portfolio-container'> {mapAllScreens()}</div>
+    <div className='portfolio-container'>
+      {mapAllScreens()}
+    </div>
 
   );
 }

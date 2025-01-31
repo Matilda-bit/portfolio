@@ -15,7 +15,7 @@
 
 .screen-heading {
     font-size: 32px;
-    color: #1f2235;
+    color: #1f2235 !important;
     font-family: "Poppins Bold";
 }
 
@@ -45,4 +45,14 @@
     width: 35px;
     border-radius: 10px;
     background-color: var(--dark-orange);
+}
+
+.screen-summary {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #1f2235 !important;
+    font-family: "Poppins SemiBold";
+    /* text-align: center; */
+    max-width: 760px;
+
 }

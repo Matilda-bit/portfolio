@@ -1,7 +1,9 @@
 import React from 'react';
-import './Profile.css';
 
 import Typical from '../typical/Typical';
+import ScrollService from "../../../utilities/ScrollService";
+
+import './Profile.css';
 
 
 
@@ -66,8 +68,8 @@ const Profile: React.FC = () => {
                                         1300,
                                         "Node.js 🗿",
                                         1400,
-                                        "Passionate about learning and growing! ✓✓✓",//38
-                                        4000
+                                        // "Passionate about learning and growing! ✓✓✓",//38
+                                        // 4000
                                     ]}
                                     wrapper='p'
                                 />
@@ -76,7 +78,7 @@ const Profile: React.FC = () => {
                         </span>
                     </div>
                     <div className='profile-options'>
-                        <button className='btn-hire-me btn primary-btn'>Hire Me</button>
+                        <button className='btn-hire-me btn primary-btn' onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>Hire Me</button>
                         <a href='PolinaOvras.pdf' download='Polina Ovras.pdf'>
                             <button className='btn btn-resume highlighted-btn'>Get Resume</button>
                         </a>

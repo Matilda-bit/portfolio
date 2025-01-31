@@ -8,6 +8,7 @@ interface Screen {
 }
 
 export default class ScrollService {
+    /* SINGLETON CLASS INSTANCE */
     static scrollHandler = new ScrollService();
 
     static currentScreenBoardCaster = new Subject<string>();

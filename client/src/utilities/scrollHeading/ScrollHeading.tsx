@@ -1,9 +1,10 @@
 import React from "react";
-
+import './ScrollHeading.css';
 
 interface ScrollHeadingProps {
   title: string;
   subHeading?: string;
+  summary?: string;
 }
 
 const ScrollHeading: React.FC<ScrollHeadingProps> = (props) => {
@@ -25,6 +26,13 @@ const ScrollHeading: React.FC<ScrollHeadingProps> = (props) => {
           <div></div>
         </div>
       </div>
+      {props.summary ? (
+        <div className="screen-summary">
+          <span>{props.summary}</span>
+        </div>
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 }

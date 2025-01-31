@@ -8,4 +8,5 @@
         url('../../assets/Home/bg-01.png');
     background-position: center;
     background-size: cover;
+    margin: auto 0;
 }

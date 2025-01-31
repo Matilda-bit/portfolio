@@ -5,6 +5,12 @@
 
 `npm i rxjs`
 
+`npm install rxjs --legacy-peer-deps`
+
+`npm install react-scripts@latest --save`
+
+`npm install typescript@4.9.5 --save-dev`
+
 ## Available Scripts
 
 In the client project directory, you can run:

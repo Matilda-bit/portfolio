@@ -59,7 +59,7 @@
 .profile-details-role h1 {
     font-size: 40px;
     font-family: cursive;
-    min-height: 130px;
+    min-height: 100px;
     margin: 0;
 }
 
@@ -93,13 +93,14 @@
     height: 380px;
     width: 380px;
     margin-left: 10px;
+    margin-bottom: 60px;
 
 }
 
 .profile-picture-bg {
     height: 96%;
     width: 96%;
-    background-image: url("../../../assets/Home/IMG_1869 2.jpg");
+    background-image: url("../../../assets/Home/me.jpg");
     background-size: cover;
     border-radius: 50%;
     background-position: center;
@@ -138,7 +139,7 @@
     .profile-picture {
         height: 320px;
         width: 320px;
-        margin-left: 4px;
+        margin-bottom: 60px;
     }
 }
 
@@ -149,7 +150,6 @@
 
     .profile-parent {
         flex-direction: column-reverse;
-        margin-top: 40px;
     }
 
     .profile-options {
