@@ -19,6 +19,7 @@ export default class ScrollService {
     }
 
     scrollToHireMe = () => {
+        console.log("try to get contact me");
         let contactMeScreen = document.getElementById("Contact Me");
         if (!contactMeScreen) return;
 
