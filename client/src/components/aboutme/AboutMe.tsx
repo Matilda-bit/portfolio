@@ -1,6 +1,6 @@
 import React from 'react';
 import ScrollService from '../../utilities/ScrollService'
-import ScreenHeading from '../../utilities/scrollHeading/ScrollHeading';
+import ScreenHeading from '../../utilities/screenHeading/ScreenHeading';
 import Animations from '../../utilities/Animations';
 import './AboutMe.css';
 
@@ -13,6 +13,7 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
         if (screen.fadeInScreen !== props.id) return;
         Animations.animations.fadeInScreen(props.id);
     };
+    
     const fadeInSubscription =
         ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 

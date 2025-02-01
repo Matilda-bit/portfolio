@@ -1,5 +1,5 @@
 import React from "react";
-import './ScrollHeading.css';
+import './ScreenHeading.css';
 
 interface ScrollHeadingProps {
   title: string;
@@ -7,7 +7,7 @@ interface ScrollHeadingProps {
   summary?: string;
 }
 
-const ScrollHeading: React.FC<ScrollHeadingProps> = (props) => {
+const ScreenHeading: React.FC<ScrollHeadingProps> = (props) => {
   return (
     <div className="heading-container">
       <div className="screen-heading">
@@ -37,4 +37,4 @@ const ScrollHeading: React.FC<ScrollHeadingProps> = (props) => {
   );
 }
 
-export default ScrollHeading;
+export default ScreenHeading;
