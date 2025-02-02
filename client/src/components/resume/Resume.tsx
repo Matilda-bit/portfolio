@@ -184,6 +184,7 @@ const Resume: React.FC<ResumeProps> = (props) => {
                         <strong> Java, OOP, Design Patterns </strong>
                     </span>
                 </div>
+                <br/>
 
                 <ResumeHeading
                     heading={"Soft&Hard prototyping"}
