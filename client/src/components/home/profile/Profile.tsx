@@ -78,10 +78,14 @@ const Profile: React.FC = () => {
                         </span>
                     </div>
                     <div className='profile-options'>
-                        <button className='btn-hire-me btn primary-btn' onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>Hire Me</button>
-                        <a href='PolinaOvras.pdf' download='Polina Ovras.pdf'>
-                            <button className='btn btn-resume highlighted-btn'>Get Resume</button>
-                        </a>
+                        <div>
+                            <button className='btn-hire-me btn primary-btn' onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>Hire Me</button>
+                        </div>
+                        <div>
+                            <a href='PolinaOvras.pdf' download='Polina Ovras.pdf'>
+                                <button className='btn btn-resume highlighted-btn'>Get Resume</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div className='profile-picture'>

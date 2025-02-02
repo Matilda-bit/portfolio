@@ -27,7 +27,7 @@ const Resume: React.FC<ResumeProps> = (props) => {
             <div className="resume-heading">
                 <div className="resume-main-heading">
                     <div className="heading-bullet"></div>
-                    <span>{props.heading ? props.heading : ""}</span>
+                    <span className="heading" >{props.heading ? props.heading : ""}</span>
                     {props.fromDate && props.toDate ? (
                         <div className="heading-date">
                             {props.fromDate + "-" + props.toDate}
@@ -55,7 +55,6 @@ const Resume: React.FC<ResumeProps> = (props) => {
         { label: "Interests", logoSrc: "interests.svg" },
     ];
 
-    //here we have
     const programmingSkillsDetails = [
         { skill: "React JS", ratingPercentage: 89 },
         { skill: "JavaScript", ratingPercentage: 75 },
@@ -117,24 +116,12 @@ const Resume: React.FC<ResumeProps> = (props) => {
                 fromDate={"2024"}
                 toDate={"2024"}
             />
-
-            {/* <ResumeHeading
-          heading={"National Youth Service Corps"}
-          subHeading={"Ministry Of Science And Technogy. Uyo Akwa Ibom State"}
-          fromDate={"2019"}
-          toDate={"2020"}
-        /> */}
-            {/* <ResumeHeading
-          heading={"High School "}
-          subHeading={"Command Secondary School Mbiri"}
-          fromDate={"2007"}
-          toDate={"2012"}
-        /> */}
+      
         </div>,
 
         /* WORK EXPERIENCE */
-        <div className="resume-screen-container" key="work-experience">
-            <div className="experience-container">
+        <div className="resume-screen-container " key="work-experience">
+            <div className="experience-container scroll ">
                 <ResumeHeading
                     heading={"O.M.C. Computers & Communications"}
                     subHeading={"SW Engineer"}
@@ -181,16 +168,8 @@ const Resume: React.FC<ResumeProps> = (props) => {
                         <strong> React, Bootstrap, RESTful APIs, and Git </strong>
                     </span>
                 </div>
-                {/* <div className="experience-description">
-                    <span className="resume-description-text">
-                        - I contributed to the development of a Billing fintech project by building the client side and integrating it with the backend.
-                    </span>
-                    <br />
-                </div> */}
-                {/* </div> */}
+            
                 <br />
-
-                {/* <div className="experience-container"> */}
                 <ResumeHeading
                     heading={"SCE - Shamoon College of Engineeringx"}
                     subHeading={"Java Mentor"}
@@ -205,17 +184,7 @@ const Resume: React.FC<ResumeProps> = (props) => {
                         <strong> Java, OOP, Design Patterns </strong>
                     </span>
                 </div>
-                {/* <div className="experience-description">
-                    <span className="resume-description-text">
-                        - I contributed to the development of a Billing fintech project by building the client side and integrating it with the backend.
-                    </span>
-                    <br />
-                </div> */}
-                {/* </div> */}
-                {/* <br/> */}
 
-
-                {/* <div className="experience-container"> */}
                 <ResumeHeading
                     heading={"Soft&Hard prototyping"}
                     subHeading={"Frontend developer"}
@@ -230,12 +199,6 @@ const Resume: React.FC<ResumeProps> = (props) => {
                         <strong> Chrome extension, Vue, RESTful APIs, and Git </strong>
                     </span>
                 </div>
-                {/* <div className="experience-description">
-                    <span className="resume-description-text">
-                        - I contributed to the development of a Billing fintech project by building the client side and integrating it with the backend.
-                    </span>
-                    <br />
-                </div> */}
             </div>
             <br />
             <br />
@@ -265,7 +228,7 @@ const Resume: React.FC<ResumeProps> = (props) => {
         /* PROJECTS */
         <div className="resume-screen-container" key="projects">
             {projectsDetails.map((projectsDetails, index) => (
-                <ResumeHeading
+                <><ResumeHeading
                     key={index}
                     heading={projectsDetails.title}
                     subHeading={projectsDetails.subHeading}
@@ -273,6 +236,8 @@ const Resume: React.FC<ResumeProps> = (props) => {
                     fromDate={projectsDetails.duration.fromDate}
                     toDate={projectsDetails.duration.toDate}
                 />
+                <br/>
+                </>
             ))}
         </div>,
 
@@ -297,6 +262,8 @@ const Resume: React.FC<ResumeProps> = (props) => {
         console.log('Selected Index:', index);
 
         const carousal = document.querySelector('.resume-details-carousal');
+        // const bulletDetails = document.querySelector('.resume-bullet-details') ;
+
         if (carousal) {
 
             let totalHeight = 0;
@@ -315,6 +282,19 @@ const Resume: React.FC<ResumeProps> = (props) => {
 
             setCarousalOffsetStyle(newCarousalOffset);
             setSelectedBulletIndex(index);
+            // if (bulletDetails) {
+            //     const thresholdWidth = 500; // Set the threshold width as per your requirement
+            //     const bulletWidth = bulletDetails.clientWidth;
+    
+            //     if (bulletWidth > thresholdWidth) {
+            //         // If width exceeds threshold, apply overflow-y: auto
+            //         bulletDetails.style.overflowY = 'auto';
+            //     } else {
+            //         // If width is smaller than threshold, remove overflow-y
+            //         bulletDetails.style.overflowY = '';
+            //     }
+            // }
+
         }
     };
 

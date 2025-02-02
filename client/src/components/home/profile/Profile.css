@@ -18,17 +18,16 @@
     font-size: 24px;
     font-family: "Poppins SemiBold";
     padding: 10px;
-    max-width: 60%;
+    max-width: 56%;
     margin: 10px 0;
 }
 
 .colz {}
-.colz .colz-icon i {
-    
-}
+
+.colz .colz-icon i {}
 
 .colz .colz-icon i {
-    
+
     color: white;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -55,9 +54,6 @@
 .profile-details-role {
     display: flex;
     flex-direction: column;
-    /* margin: 14px 0 24px; */
-    /* max-width: 60%; */
-    /* margin: 10px auto 30px; */
 }
 
 .profile-details-role h1 {
@@ -77,8 +73,15 @@
 }
 
 .profile-options {
-    /* margin-left: 28px; */
-    padding: 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 10px;
+    width: 100%;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -86,14 +89,6 @@
     background-color: cornsilk;
     color: #111;
 }
-
-.profile-options .btn {
-    margin: 10px 10px;
-}
-.profile-options a .btn {
-    margin: 10px 10px;
-}
-
 
 .profile-picture {
     display: flex;
@@ -129,7 +124,7 @@
     }
 
     .profile-details {
-        width: 60%;
+        width: 80%;
     }
 
     .profile-details-name {
@@ -140,17 +135,19 @@
         font-size: 12px;
     }
 
-    .profile-options .btn {
-        width: 120px;
+    .profile-options .btn-hire-me {
+        width: 120px !important;
         padding: 10px 10px;
         z-index: 700;
-        margin: 10px 10px;
+        white-space: nowrap;
+        text-align: center;
     }
-    .profile-options a .btn {
+
+    .profile-options .btn-resume {
         width: 120px;
         padding: 10px 10px;
         z-index: 700;
-        margin: 10px 10px;
+        text-wrap: nowrap;
     }
 }
 
@@ -160,10 +157,7 @@
         width: 280px;
         margin-bottom: 60px;
     }
-    .profile-details {
-        width: 80% !important;
-    }
-    
+
 }
 
 @media only screen and (max-width: 810px) {
@@ -176,8 +170,9 @@
     }
 
     .profile-options {
-        display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     .profile-details {
@@ -192,20 +187,21 @@
     .profile-details-role {
         text-align: center;
     }
+
+    .fa {
+        font-size: 20px;
+        width: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
     .fa {
         font-size: 15px;
         width: 15px;
     }
 
-}
-@media only screen and (max-width: 450px) {
-    .fa {
-        font-size: 10px;
-        width: 10px;
-    }
-    .profile-details {
-        margin: 10px 10px;
-    }
+
 }
 
 @media only screen and (max-width: 370px) {
@@ -216,7 +212,7 @@
     }
 
     .profile-details {
-        width: 90%;
+        width: 80%;
     }
 
     .profile-parent {
