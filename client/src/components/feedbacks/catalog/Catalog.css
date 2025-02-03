@@ -1,0 +1,18 @@
+.catalog {
+    /* padding: 10px; */
+}
+
+.row {
+    display: flex; 
+    gap: 20px;
+    overflow-x: auto; 
+}
+
+.row::-webkit-scrollbar {
+    display: none;
+}
+
+.row {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
