@@ -15,8 +15,8 @@ interface FeedbackProps {
 }
 
 const Feedback: React.FC<FeedbackProps> = (props) => {
-  let fadeInScreenHandler = (screen: any) => {
-    if (screen.fadeInScreen !== props.id) return;
+  let fadeInScreenHandler = (screen: string) => {
+    if (screen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
 
@@ -24,6 +24,7 @@ const Feedback: React.FC<FeedbackProps> = (props) => {
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
   return (
+    // <div className="testimonial-section fade-in" id={props.id || ""}>
     <div>
       <ScreenHeading
         title={"Testimonial"}
@@ -157,7 +158,6 @@ const Feedback: React.FC<FeedbackProps> = (props) => {
                   <p>role title</p>
                 </div>
               </div>
-            {/* </div> */}
           </Catalog>
         </div>
       </section>

@@ -13,9 +13,8 @@ const Resume: React.FC<ResumeProps> = (props) => {
     const [selectedBulletIndex, setSelectedBulletIndex] = useState<number>(0);
     const [carousalOffsetStyle, setCarousalOffsetStyle] = useState<any>({});
 
-    let fadeInScreenHandler = (screen: any) => {
-        if (screen.fadeInScreen !== props.id) return;
-
+    let fadeInScreenHandler = (screen: string) => {
+        if (screen !== props.id) return;
         Animations.animations.fadeInScreen(props.id);
     };
     const fadeInSubscription =
@@ -229,7 +228,8 @@ const Resume: React.FC<ResumeProps> = (props) => {
         /* PROJECTS */
         <div className="resume-screen-container" key="projects">
             {projectsDetails.map((projectsDetails, index) => (
-                <><ResumeHeading
+                <div key={index}>
+                    <ResumeHeading
                     key={index}
                     heading={projectsDetails.title}
                     subHeading={projectsDetails.subHeading}
@@ -238,7 +238,7 @@ const Resume: React.FC<ResumeProps> = (props) => {
                     toDate={projectsDetails.duration.toDate}
                 />
                 <br/>
-                </>
+                </div>
             ))}
         </div>,
 
@@ -263,7 +263,6 @@ const Resume: React.FC<ResumeProps> = (props) => {
         console.log('Selected Index:', index);
 
         const carousal = document.querySelector('.resume-details-carousal');
-        // const bulletDetails = document.querySelector('.resume-bullet-details') ;
 
         if (carousal) {
 
@@ -283,19 +282,6 @@ const Resume: React.FC<ResumeProps> = (props) => {
 
             setCarousalOffsetStyle(newCarousalOffset);
             setSelectedBulletIndex(index);
-            // if (bulletDetails) {
-            //     const thresholdWidth = 500; // Set the threshold width as per your requirement
-            //     const bulletWidth = bulletDetails.clientWidth;
-    
-            //     if (bulletWidth > thresholdWidth) {
-            //         // If width exceeds threshold, apply overflow-y: auto
-            //         bulletDetails.style.overflowY = 'auto';
-            //     } else {
-            //         // If width is smaller than threshold, remove overflow-y
-            //         bulletDetails.style.overflowY = '';
-            //     }
-            // }
-
         }
     };
 
@@ -341,23 +327,18 @@ const Resume: React.FC<ResumeProps> = (props) => {
 
         if (carousal) {
             const handleScroll = () => {
-                // Get the current scroll position
                 const scrollPosition = carousal.scrollTop;
 
-                // Example: Add custom styles based on scroll position
                 if (scrollPosition > 100) {
                     carousal.style.boxShadow = '0px 4px 6px rgba(0, 0, 0, 0.1)';
                 } else {
                     carousal.style.boxShadow = 'none';
                 }
 
-                // You can add more scroll effects based on the scroll position here
             };
 
-            // Attach the scroll event listener
             carousal.addEventListener('scroll', handleScroll);
 
-            // Clean up the event listener on component unmount
             return () => {
                 carousal.removeEventListener('scroll', handleScroll);
             };

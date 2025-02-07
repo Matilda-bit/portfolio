@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ScrollService from '../../utilities/ScrollService'
 import ScreenHeading from '../../utilities/screenHeading/ScreenHeading';
 import Animations from '../../utilities/Animations';
@@ -9,20 +9,21 @@ interface AboutMeProps {
 }
 
 const AboutMe: React.FC<AboutMeProps> = (props) => {
-    let fadeInScreenHandler = (screen: any) => {
-        if (screen.fadeInScreen !== props.id) return;
+
+    let fadeInScreenHandler = (screen: string) => {
+        if (screen !== props.id) return;
         Animations.animations.fadeInScreen(props.id);
     };
-    
+
     const fadeInSubscription =
         ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
     const SCREEN_CONSTSANTS = {
-        
+
         description:
-        (<>
-        <strong>A passionate Full-Stack Developer</strong> with expertise in <strong>React</strong>, <strong>TypeScript</strong>, <strong>PHP</strong>, and <strong>JavaScript</strong>. I specialize in building sleek, responsive applications that ensure optimal performance and user experience. With a strong background in both <strong>frontend</strong> and <strong>backend</strong> development, <strong>API integrations</strong>, <strong>database management</strong>, <strong>system design</strong>, and cloud solutions like <strong>AWS S3</strong>, I create scalable and well-structured applications. I thrive on <strong>problem-solving</strong>, mentoring developers, and collaborating to deliver impactful products. My experience spans <strong>fintech</strong>, <strong>marketplaces</strong>, and <strong>cloud-based platforms</strong>. Currently, I’m working on <strong>Meme Byte</strong>, a meme generation platform, and <strong>PetMeet</strong>, an app connecting pet owners for playdates and shared experiences.
-    </>),
+            (<>
+                <strong>A passionate Full-Stack Developer</strong> with expertise in <strong>React</strong>, <strong>TypeScript</strong>, <strong>PHP</strong>, and <strong>JavaScript</strong>. I specialize in building sleek, responsive applications that ensure optimal performance and user experience. With a strong background in both <strong>frontend</strong> and <strong>backend</strong> development, <strong>API integrations</strong>, <strong>database management</strong>, <strong>system design</strong>, and cloud solutions like <strong>AWS S3</strong>, I create scalable and well-structured applications. I thrive on <strong>problem-solving</strong>, mentoring developers, and collaborating to deliver impactful products. My experience spans <strong>fintech</strong>, <strong>marketplaces</strong>, and <strong>cloud-based platforms</strong>. Currently, I’m working on <strong>Meme Byte</strong>, a meme generation platform, and <strong>PetMeet</strong>, an app connecting pet owners for playdates and shared experiences.
+            </>),
         highlights: {
             bullets: [
                 "<bold>Full Stack Web & Mobile Development</bold>",
@@ -47,6 +48,9 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
         ));
     };
 
+    // 
+    
+
 
     return (
         <div
@@ -54,14 +58,14 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
             id={props.id || ""}
         >
             <div className="about-me-parent">
-                <ScreenHeading title={"About Me"} subHeading={"Why Choose Me?"} summary={"With over 4 years of experience in full-stack web and mobile development, I bring a strong mix of technical expertise, creativity, and problem-solving to every project. My focus is on building scalable, high-performance applications that enhance user experience and drive engagement. Whether it's frontend development, backend logic, API integrations, system design, or cloud solutions, I deliver clean, efficient, and maintainable code that meets business goals."}/>
+                <ScreenHeading title={"About Me"} subHeading={"Why Choose Me?"} summary={"With over 4 years of experience in full-stack web and mobile development, I bring a strong mix of technical expertise, creativity, and problem-solving to every project. My focus is on building scalable, high-performance applications that enhance user experience and drive engagement. Whether it's frontend development, backend logic, API integrations, system design, or cloud solutions, I deliver clean, efficient, and maintainable code that meets business goals."} />
                 <div className="about-me-card">
                     <div className="about-me-profile"></div>
                     <div className="about-me-details">
                         <span className="about-me-description">
 
                             {SCREEN_CONSTSANTS.description}
-                    
+
                         </span>
                         <div className="about-me-highlights">
                             <div className="highlight-heading">
