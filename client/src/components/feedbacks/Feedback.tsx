@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from 'react';
 
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
@@ -15,13 +15,22 @@ interface FeedbackProps {
 }
 
 const Feedback: React.FC<FeedbackProps> = (props) => {
-  let fadeInScreenHandler = (screen: string) => {
-    if (screen !== props.id) return;
-    Animations.animations.fadeInScreen(props.id);
-  };
+  useEffect(() => {
+      const fadeInScreenHandler = (screen: string) => {
+          if (screen !== props.id) {
+              return;
+          }
 
-  const fadeInSubscription =
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+          Animations.animations.fadeInScreen(props.id);
+      };
+
+      const fadeInSubscription =
+          ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+
+      return () => {
+          fadeInSubscription.unsubscribe();
+      };
+  }, [props.id]);
 
   return (
     // <div className="testimonial-section fade-in" id={props.id || ""}>

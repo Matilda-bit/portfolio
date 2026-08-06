@@ -82,7 +82,7 @@ const Profile: React.FC = () => {
                             <button className='btn-hire-me btn primary-btn' onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>Hire Me</button>
                         </div>
                         <div>
-                            <a href='PolinaOvras.pdf' download='Polina Ovras.pdf'>
+                            <a href='Polina_Wasserman_2026.pdf' download='Polina Wasserman.pdf'>
                                 <button className='btn btn-resume highlighted-btn'>Get Resume</button>
                             </a>
                         </div>

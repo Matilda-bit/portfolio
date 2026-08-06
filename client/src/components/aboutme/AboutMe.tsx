@@ -10,23 +10,37 @@ interface AboutMeProps {
 
 const AboutMe: React.FC<AboutMeProps> = (props) => {
 
-    let fadeInScreenHandler = (screen: string) => {
-        if (screen !== props.id) return;
-        Animations.animations.fadeInScreen(props.id);
-    };
+    useEffect(() => {
+        const fadeInScreenHandler = (screen: string) => {
+            if (screen !== props.id) {
+                return;
+            }
 
-    const fadeInSubscription =
-        ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+            Animations.animations.fadeInScreen(props.id);
+        };
+
+        const fadeInSubscription =
+            ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+
+        return () => {
+            fadeInSubscription.unsubscribe();
+        };
+    }, [props.id]);
+
 
     const SCREEN_CONSTSANTS = {
 
         description:
             (<>
-                <strong>A passionate Full-Stack Developer</strong> with expertise in <strong>React</strong>, <strong>TypeScript</strong>, <strong>PHP</strong>, and <strong>JavaScript</strong>. I specialize in building sleek, responsive applications that ensure optimal performance and user experience. With a strong background in both <strong>frontend</strong> and <strong>backend</strong> development, <strong>API integrations</strong>, <strong>database management</strong>, <strong>system design</strong>, and cloud solutions like <strong>AWS S3</strong>, I create scalable and well-structured applications. I thrive on <strong>problem-solving</strong>, mentoring developers, and collaborating to deliver impactful products. My experience spans <strong>fintech</strong>, <strong>marketplaces</strong>, and <strong>cloud-based platforms</strong>. Currently, I’m working on <strong>Meme Byte</strong>, a meme generation platform, and <strong>PetMeet</strong>, an app connecting pet owners for playdates and shared experiences.
+                <strong>A passionate Full-Stack Developer</strong> with expertise in <strong>React</strong>, <strong>TypeScript</strong>, <strong>PHP</strong>, and <strong>JavaScript</strong>. I specialize in building sleek, responsive applications that ensure optimal performance and user experience. With a strong background in both <strong>frontend</strong> and <strong>backend</strong> development, <strong>API integrations</strong>, <strong>database management</strong>, <strong>system design</strong>, and cloud solutions like <strong>AWS S3</strong>, I create scalable and well-structured applications. I thrive on <strong>problem-solving</strong>, mentoring developers, and collaborating to deliver impactful products. My experience spans <strong>fintech</strong>, <strong>marketplaces</strong>, and <strong>cloud-based platforms</strong>. Currently, I’m working on  
+                <a href="https://meme-generator-react-eosin.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <strong>Meme Byte</strong>
+                </a>
+                , a meme generation platform, and <strong>PetMeet</strong>, an app connecting pet owners for playdates and shared experiences.
             </>),
         highlights: {
             bullets: [
-                "<bold>Full Stack Web & Mobile Development</bold>",
+                "<b>Full Stack Web & Mobile Development</b>",
                 "<b>Interactive Front End</b> designed to match UI/UX specifications",
                 "<b>React, TypeScript, PHP & JavaScript</b> for dynamic and scalable applications",
                 "<b>Redux for State Management</b> and seamless data flow",
@@ -80,7 +94,7 @@ const AboutMe: React.FC<AboutMeProps> = (props) => {
                             >
                                 Hire Me
                             </button>
-                            <a href='PolinaOvras.pdf' download='Polina Ovras.pdf'>
+                            <a href='Polina_Wasserman_2026.pdf' download='Polina Wasserman.pdf'>
                                 <button className="btn btn-resume highlighted-btn">Get Resume</button>
                             </a>
                         </div>
