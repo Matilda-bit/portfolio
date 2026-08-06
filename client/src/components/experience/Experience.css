@@ -1,0 +1,220 @@
+.experience-container {
+    padding: 90px 24px 110px;
+    background: #f8f8fb;
+}
+
+.experience-parent {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+}
+
+.experience-content {
+    display: grid;
+    gap: 30px;
+    margin-top: 56px;
+}
+
+.experience-item {
+    padding: 34px;
+    background: #ffffff;
+    border: 1px solid rgba(32, 34, 56, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 14px 36px rgba(32, 34, 56, 0.06);
+}
+
+.experience-item-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.experience-company {
+    margin: 0 0 6px;
+    color: var(--dark-orange);
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.experience-item h3 {
+    margin: 0;
+    color: #202238;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    line-height: 1.35;
+}
+
+.experience-period {
+    flex: 0 0 auto;
+    padding: 8px 13px;
+    color: #ffffff;
+    background: var(--dark-orange);
+    border-radius: 999px;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.experience-description {
+    max-width: 900px;
+    margin: 22px 0 0;
+    color: #5e6070;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.experience-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 22px;
+}
+
+.experience-technologies span {
+    padding: 7px 12px;
+    color: #353748;
+    background: #f1f1f6;
+    border-radius: 999px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.experience-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.experience-highlight {
+    display: flex;
+    gap: 13px;
+    padding: 18px;
+    background: #fafafd;
+    border: 1px solid rgba(32, 34, 56, 0.07);
+    border-radius: 13px;
+}
+
+.experience-highlight-marker {
+    flex: 0 0 auto;
+    width: 9px;
+    height: 9px;
+    margin-top: 7px;
+    background: var(--dark-orange);
+    border-radius: 50%;
+}
+
+.experience-highlight h4 {
+    margin: 0 0 6px;
+    color: #202238;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+
+.experience-highlight p {
+    margin: 0;
+    color: #686a78;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+@media only screen and (max-width: 760px) {
+    .experience-container {
+        padding: 75px 18px 90px;
+    }
+
+    .experience-item {
+        padding: 24px;
+    }
+
+    .experience-item-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .experience-period {
+        align-self: flex-start;
+    }
+
+    .experience-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.experience-section-title {
+    margin: 30px 0 14px;
+    color: #202238;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.experience-projects {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.experience-project {
+    padding: 20px;
+    background: #fafafd;
+    border: 1px solid rgba(32, 34, 56, 0.08);
+    border-radius: 14px;
+}
+
+.experience-project h5 {
+    margin: 0 0 8px;
+    color: #202238;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+.experience-project p {
+    margin: 0;
+    color: #686a78;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.experience-project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 15px;
+}
+
+.experience-project-technologies span {
+    padding: 6px 10px;
+    color: #353748;
+    background: #eeeeF4;
+    border-radius: 999px;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+}
+
+.experience-achievement {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 10px 12px;
+    color: #8a4a00;
+    background: #fff4df;
+    border: 1px solid #f3d29a;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 900px) {
+    .experience-projects {
+        grid-template-columns: 1fr;
+    }
+}

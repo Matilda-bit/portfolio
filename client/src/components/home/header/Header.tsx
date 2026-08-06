@@ -68,7 +68,7 @@ const Header: React.FC = () => {
                         <FontAwesomeIcon className='header-hamburger-bars' icon={faBars} />
                     </div>
                     <div className='header-logo'>
-                        <span>WASSERMAN~</span>
+                        <span>PW.</span>
 
                     </div>
                     <div

@@ -1,102 +1,93 @@
 import React from 'react';
 
-import Typical from '../typical/Typical';
-import ScrollService from "../../../utilities/ScrollService";
+import ScrollService from '../../../utilities/ScrollService';
 
 import './Profile.css';
 
-
-
 const Profile: React.FC = () => {
     return (
-        <div className='profile-container'>
-            <div className='profile-parent'>
-                <div className='profile-details'>
-                    <div className='colz'>
-                        <div className='colz-icon'>
-                            <a href='https://www.facebook.com/ovras94/' target="_blank" rel="noopener noreferrer">
-                                <i className='fa fa-facebook'></i>
+        <div className="profile-container">
+            <div className="profile-parent">
+                <div className="profile-details">
+                    <div className="colz">
+                        <div className="colz-icon">
+                            <a
+                                href="https://www.linkedin.com/in/polina-ovras/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn profile"
+                            >
+                                <i className="fa fa-linkedin" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/polina-ovras/" target="_blank" rel="noopener noreferrer">
-                                <i className='fa fa-linkedin'></i>
-                            </a>
-                            <a href='https://github.com/Matilda-bit' target="_blank" rel="noopener noreferrer">
-                                <i className='fa fa-github'></i>
-                            </a>
-                            <a href='https://api.whatsapp.com/send/?phone=%2B972543954881&text&type=phone_number&app_absent=0' target="_blank" rel="noopener noreferrer">
-                                <i className='fa fa-whatsapp'></i>
-                            </a>
-                            <a href="mailto:polinaovras@gmail.com?subject=subject&message=message" target="_blank" rel="noopener noreferrer">
-                                <i className='fa fa-google'></i>
-                            </a>
-                            {/* <a href='https://www.instagram.com/ovraspolina?igsh=Ymh5MTJjbmx2Zncw&utm_source=qr' target="_blank" rel="noopener noreferrer">
-                                <i className='fa fa-instagram'></i>
-                            </a> */}
-                        </div>
 
+                            <a
+                                href="https://github.com/Matilda-bit"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="GitHub profile"
+                            >
+                                <i className="fa fa-github" aria-hidden="true"></i>
+                            </a>
+
+                            <a
+                                href="mailto:polinaovras@gmail.com"
+                                aria-label="Send email to Polina"
+                            >
+                                <i className="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
 
-
-                    <div className='profile-details-name'>
-                        <span className='primary-text'>
-                            {" "}
-                            Hello I'm <span className='highlighted-text'>Polina</span>
+                    <div className="profile-details-name">
+                        <span className="primary-text">
+                            Hello, I&apos;m{' '} 
+                        </span>
+                        <span className="primary-text">
+                            <span className="highlighted-text">
+                                Polina Wasserman
+                            </span>
                         </span>
                     </div>
 
-                    <div className='profile-details-role'>
-                        <span className='primary-text'>
-                            {" "}
-                            <h1>
-                                {" "}
-                                <Typical
-                                    loop={Infinity}
-                                    steps={[
-                                        "Software Engineer 🎓",//17 chars
-                                        2000,
-                                        "FullStack Dev 🦆",//13
-                                        2000,
-                                        "Frontend Dev 🎨",//12
-                                        2000,
-                                        "TypeScript 🔧",//12
-                                        2000,
-                                        "React 🪄",
-                                        1500,
-                                        "JS + CSS 📟",
-                                        1600,
-                                        "PHP 🐘",
-                                        1300,
-                                        "Node.js 🗿",
-                                        1400,
-                                        // "Passionate about learning and growing! ✓✓✓",//38
-                                        // 4000
-                                    ]}
-                                    wrapper='p'
-                                />
-                            </h1>
-                            <span className='profile-role-tagline'> Experienced in crafting innovative solutions using advanced front-end and back-end technologies, with a strong focus on detail and quality.</span>
-                        </span>
+                    <div className="profile-details-role">
+                        <div className="primary-text">
+                            <h1>Full Stack PHP Developer</h1>
+
+                            <p className="profile-role-tagline">
+                                Building secure and scalable CRM systems
+                                for fintech products using PHP, Symfony,
+                                MySQL, React and TypeScript.
+                            </p>
+                        </div>
                     </div>
-                    <div className='profile-options'>
-                        <div>
-                            <button className='btn-hire-me btn primary-btn' onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>Hire Me</button>
-                        </div>
-                        <div>
-                            <a href='Polina_Wasserman_2026.pdf' download='Polina Wasserman.pdf'>
-                                <button className='btn btn-resume highlighted-btn'>Get Resume</button>
-                            </a>
-                        </div>
+
+                    <div className="profile-options">
+                        <button
+                            type="button"
+                            className="btn-hire-me btn primary-btn"
+                            onClick={() =>
+                                ScrollService.scrollHandler.scrollToHireMe()
+                            }
+                        >
+                            Contact Me
+                        </button>
+
+                        <a
+                            href="/Polina_Wasserman_2026.pdf"
+                            download="Polina_Wasserman_Resume.pdf"
+                            className="btn btn-resume highlighted-btn"
+                        >
+                            Download Resume
+                        </a>
                     </div>
                 </div>
-                <div className='profile-picture'>
-                    <div className='profile-picture-bg'>
 
-                    </div>
+                <div className="profile-picture">
+                    <div className="profile-picture-bg"></div>
                 </div>
             </div>
         </div>
     );
-}
-
+};
 
 export default Profile;
