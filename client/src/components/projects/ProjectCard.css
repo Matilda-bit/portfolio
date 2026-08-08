@@ -1,0 +1,133 @@
+.project-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 420px;
+    padding: 30px;
+    overflow: hidden;
+
+    background: #ffffff;
+    border: 1px solid #ececf1;
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 35px rgba(31, 34, 51, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(255, 88, 35, 0.25);
+
+    box-shadow:
+        0 18px 44px rgba(31, 34, 51, 0.1);
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 30px;
+
+    width: 42px;
+    height: 4px;
+
+    background: #ff5823;
+    border-radius: 0 0 5px 5px;
+}
+
+.project-card-header {
+    margin-bottom: 20px;
+}
+
+.project-card-subtitle {
+    display: block;
+    margin-bottom: 9px;
+
+    color: #8b8c97;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.project-card-title {
+    margin: 0;
+
+    color: #24263b;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.project-card-description {
+    margin: 0 0 24px;
+
+    color: #666875;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.project-tech-list,
+.featured-project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tech {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 11px;
+
+    color: #4d4f5d;
+    background: #f5f5f8;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.project-card-takeaway {
+    display: flex;
+    gap: 10px;
+
+    margin-top: auto;
+    padding-top: 26px;
+
+    color: #565866;
+    font-size: 13px;
+    line-height: 1.6;
+
+    border-top: 1px solid #eeeeF2;
+}
+
+.project-card-arrow {
+    flex-shrink: 0;
+    color: #ff5823;
+    font-weight: 700;
+}
+
+.project-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    margin-top: 22px;
+
+    color: #24263b;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.project-card-link:hover {
+    color: #ff5823;
+}
