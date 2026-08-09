@@ -76,7 +76,7 @@ const Profile: React.FC = () => {
                         </button>
 
                         <a
-                            href="/Polina_Wasserman_2026.pdf"
+                            href="/Polina_Wasserman.pdf"
                             download="Polina_Wasserman_Resume.pdf"
                             className="btn btn-resume highlighted-btn"
                         >
