@@ -1,7 +1,5 @@
 import React from 'react';
 
-import ScrollService from '../../../utilities/ScrollService';
-
 import './Profile.css';
 
 const Profile: React.FC = () => {
