@@ -4,6 +4,7 @@ import AboutMe from '../components/aboutme/AboutMe';
 // import Feedback from '../components/feedbacks/Feedback';
 import Experience from '../components/experience/Experience';
 import Projects from '../components/projects/Projects';
+import Education from '../components/education/Education';
 import Contact from '../components/contact/Contact';
 
 
@@ -23,6 +24,10 @@ export const TOTAL_SCREENS = [
     {
         screen_name: 'Projects',
         component: Projects,
+    },
+    {
+        screen_name: 'Education',
+        component: Education,
     },
     {
         screen_name: 'Contact',

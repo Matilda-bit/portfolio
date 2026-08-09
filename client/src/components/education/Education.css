@@ -1,0 +1,231 @@
+.education-container {
+    width: 100%;
+    padding: 90px 24px 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #fafafd;
+
+    box-sizing: border-box;
+}
+
+.education-parent {
+    width: 100%;
+    max-width: 1040px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.education-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 820px;
+
+    margin: 48px auto 0;
+    padding: 46px 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    background: #ffffff;
+
+    border: 1px solid #ececf1;
+    border-radius: 24px;
+
+    box-shadow:
+        0 18px 50px rgba(34, 35, 58, 0.07);
+
+    overflow: hidden;
+    box-sizing: border-box;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+/* Same small orange accent used across the portfolio */
+.education-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 52px;
+
+    width: 62px;
+    height: 4px;
+
+    background: #ff582f;
+
+    border-radius: 0 0 5px 5px;
+}
+
+.education-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 24px 60px rgba(34, 35, 58, 0.1);
+}
+
+.education-main {
+    min-width: 0;
+}
+
+.education-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: #9a9ba8;
+
+    font-family: "Poppins SemiBold", sans-serif;
+    font-size: 11px;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.education-main h3 {
+    margin: 0 0 10px;
+
+    color: #292a40;
+
+    font-family: "Poppins Bold", sans-serif;
+    font-size: clamp(24px, 3vw, 32px);
+
+    line-height: 1.25;
+}
+
+.education-institution {
+    margin: 0;
+
+    color: #737485;
+
+    font-family: "Poppins Regular", sans-serif;
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+.education-icon {
+    flex-shrink: 0;
+
+    width: 82px;
+    height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ff582f;
+
+    background:
+        rgba(255, 88, 47, 0.07);
+
+    border: 1px solid rgba(255, 88, 47, 0.12);
+    border-radius: 50%;
+}
+
+.education-icon i {
+    margin: 0;
+    padding: 0;
+
+    width: auto;
+
+    color: inherit;
+
+    font-size: 30px;
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+    .education-container {
+        padding: 70px 20px 65px;
+    }
+
+    .education-card {
+        max-width: 650px;
+
+        margin-top: 38px;
+        padding: 40px 38px;
+
+        gap: 30px;
+
+        border-radius: 22px;
+    }
+
+    .education-card::before {
+        left: 38px;
+    }
+
+    .education-main h3 {
+        font-size: 27px;
+    }
+
+    .education-icon {
+        width: 72px;
+        height: 72px;
+    }
+
+    .education-icon i {
+        font-size: 27px;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 520px) {
+    .education-container {
+        padding: 40px 18px 45px;
+    }
+
+    .education-card {
+        margin-top: 34px;
+        padding: 40px 24px 34px;
+
+        flex-direction: column-reverse;
+        align-items: flex-start;
+
+        gap: 24px;
+
+        border-radius: 20px;
+    }
+
+    .education-card::before {
+        left: 24px;
+
+        width: 52px;
+    }
+
+    .education-icon {
+        width: 58px;
+        height: 58px;
+    }
+
+    .education-icon i {
+        font-size: 22px;
+    }
+
+    .education-eyebrow {
+        margin-bottom: 11px;
+
+        font-size: 10px;
+    }
+
+    .education-main h3 {
+        margin-bottom: 8px;
+
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .education-institution {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}

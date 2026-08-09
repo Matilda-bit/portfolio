@@ -50,22 +50,7 @@ const expertiseItems: ExpertiseItem[] = [
 ];
 
 const AboutMe: React.FC<AboutMeProps> = ({ id }) => {
-    // useEffect(() => {
-    //     const fadeInScreenHandler = (screen: string) => {
-    //         if (screen !== id) {
-    //             return;
-    //         }
 
-    //         Animations.animations.fadeInScreen(id);
-    //     };
-
-    //     const fadeInSubscription =
-    //         ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
-
-    //     return () => {
-    //         fadeInSubscription.unsubscribe();
-    //     };
-    // }, [id]);
 
     return (
         <section
@@ -81,11 +66,11 @@ const AboutMe: React.FC<AboutMeProps> = ({ id }) => {
                 <div className="about-me-content">
                     <div className="about-me-introduction">
                         <p className="about-me-lead">
-                            I&apos;m a Full Stack PHP Developer with 7+ years of
-                            experience delivering and supporting business-critical
-                            web applications, from cloud-based SaaS solutions to
-                            large-scale fintech CRM platforms.
-                        </p>
+                            I&apos;m a Full Stack PHP Developer with a B.Sc. in
+                            Software Engineering and 7+ years of experience delivering
+                            and supporting business-critical web applications, from
+                            cloud-based SaaS solutions to large-scale fintech CRM platforms.
+                        </p>    
 
                         <p>
                             My core expertise includes PHP, Symfony, MySQL and
