@@ -65,9 +65,14 @@ const Profile: React.FC = () => {
                         <button
                             type="button"
                             className="btn-hire-me btn primary-btn"
-                            onClick={() =>
-                                ScrollService.scrollHandler.scrollToHireMe()
-                            }
+                            onClick={() => {
+                                document
+                                    .getElementById('Contact')
+                                    ?.scrollIntoView({
+                                        behavior: 'smooth',
+                                        block: 'start',
+                                    });
+                            }}
                         >
                             Contact Me
                         </button>
