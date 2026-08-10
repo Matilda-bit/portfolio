@@ -65,7 +65,7 @@ export const experienceData: ExperienceItemData[] = [
     },
     {
         company: 'O.M.C. Computers & Communications',
-        role: 'Full Stack PHP Developer',
+        role: 'SW Developer',
         period: 'Feb 2021 — Sep 2023',
         description:
             'Developed and maintained cloud-based web applications as part of the SaaS & Infrastructure team, contributing to internal platforms, cloud services and cross-team engineering initiatives.',

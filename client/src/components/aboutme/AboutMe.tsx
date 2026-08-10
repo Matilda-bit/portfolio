@@ -66,8 +66,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ id }) => {
                 <div className="about-me-content">
                     <div className="about-me-introduction">
                         <p className="about-me-lead">
-                            I&apos;m a Full Stack PHP Developer with a B.Sc. in
-                            Software Engineering and 7+ years of experience delivering
+                            I&apos;m a Full Stack Developer with a B.Sc. in
+                            Software Engineering and 6+ years of experience delivering
                             and supporting business-critical web applications, from
                             cloud-based SaaS solutions to large-scale fintech CRM platforms.
                         </p>    
@@ -75,8 +75,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ id }) => {
                         <p>
                             My core expertise includes PHP, Symfony, MySQL and
                             JavaScript, with additional experience in React,
-                            TypeScript, AWS, Node.js services, REST APIs,
-                            webhooks, role-based access control and email
+                            TypeScript, AWS, Node.js and Redis services, REST APIs,
+                            webhooks, PSPs, role-based access control and email
                             infrastructure.
                         </p>
 

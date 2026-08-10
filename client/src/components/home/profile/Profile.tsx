@@ -49,11 +49,11 @@ const Profile: React.FC = () => {
 
                     <div className="profile-details-role">
                         <div className="primary-text">
-                            <h1>Full Stack PHP Developer</h1>
+                            <h1>Full Stack Developer</h1>
 
                             <p className="profile-role-tagline">
                                 Building secure and scalable CRM systems
-                                for fintech products using PHP, Symfony,
+                                for fintech products using PHP,
                                 MySQL, React and TypeScript.
                             </p>
                         </div>
