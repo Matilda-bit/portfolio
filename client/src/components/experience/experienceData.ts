@@ -35,6 +35,7 @@ export const experienceData: ExperienceItemData[] = [
             'Twig',
             'REST APIs',
             'Docker',
+            'Redis',
             'Linux',
             'Doctrine',
             'RBAC',

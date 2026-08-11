@@ -21,6 +21,10 @@
   max-width: calc(100% - 40px);
 }
 
+.logo-dot {
+  color: var(--dark-orange);
+}
+
 .header-options {
   display: flex;
   align-items: center;
