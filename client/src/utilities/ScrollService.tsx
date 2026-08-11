@@ -49,35 +49,24 @@ export default class ScrollService {
         }
     }
 
-    checkCurrentScreenUnderViewport = (event: Event) => {
-        // if (!event || Object.keys(event).length < 1) {
-        if (!event) {
+    checkCurrentScreenUnderViewport = () => {
 
-            return;
-        }
+        const triggerPoint =
+            window.innerHeight * 0.35;
+
         for (let screen of TOTAL_SCREENS as Screen[]) {
-
-            let screenElement = document.getElementById(screen.screen_name);
+            const screenElement = document.getElementById( screen.screen_name );
             if (!screenElement) continue;
+            const rect = screenElement.getBoundingClientRect();
+            const isCurrentScreen = rect.top <= triggerPoint && rect.bottom > triggerPoint;
 
-            let fullyVisible = this.isElementInView(screenElement, "complete");
-            let partiallyVisible = this.isElementInView(screenElement, "partial");
-
-            if (fullyVisible || partiallyVisible) {
-                if (partiallyVisible && !screen.alreadyRendered) {
-
-                    ScrollService.currentScreenFadeIn.next(screen.screen_name);
+            if (isCurrentScreen) {
+                ScrollService.currentScreenBoardCaster.next( screen.screen_name );
+                if (!screen.alreadyRendered) {
+                    ScrollService.currentScreenFadeIn.next( screen.screen_name );
                     screen.alreadyRendered = true;
-                    break;
-                }
-                if (fullyVisible) {
-                    ScrollService.currentScreenBoardCaster.next(screen.screen_name);
-                    break;
                 }
 
-            }
-            if (fullyVisible || partiallyVisible) {
-                ScrollService.currentScreenBoardCaster.next(screen.screen_name);
                 break;
             }
         }

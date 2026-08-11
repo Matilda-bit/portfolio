@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     min-height: 560px;
-    padding: 70px 32px 90px;
+    padding: 175px 32px 90px;
     overflow: hidden;
 }
 
@@ -156,8 +156,8 @@
 .profile-details-role h1::after {
     content: "";
     display: block;
-    width: 120px;
-    height: 4px;
+    width: 90px;
+    height: 3px;
     margin-top: 28px;
     background: var(--dark-orange);
 }
